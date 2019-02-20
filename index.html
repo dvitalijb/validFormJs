@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Form</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <section>
+            <form name="form" action="some.ua" method="POST">
+                <fieldset>
+                    <h1>User profile</h1>
+                    <input data-validation="firstName" placeholder="First name *">
+                    <span class="span emptyFieldFirstName">This field is required.</span>
+                    <span class="span notValidFirstName">First name is not valid.</span>
+                    <input data-validation="lastName" placeholder="Last name *">
+                    <span class="span emptyFieldLastName">This field is required.</span>
+                    <span class="span notValidlastName">Last name is not valid.</span>
+                    <input placeholder="Birthday *" name="datepicker" data-validation="datepicker">
+                    <span class="span emptyFieldBirthday">This field is required.</span>
+                    <fieldset data-validation="gander">
+                        <legend>Gender *:</legend>
+                        <label>
+                            Male:
+                                     <input type="radio" name="gander" value="male">
+                        </label>
+                        <label>
+                            Female:
+                            <input type="radio" name="gander" value="female">
+                        </label>
+                        <label>
+                            Other:
+                            <input type="radio" name="gander" value="other">
+                        </label>
+                    </fieldset>
+                    <span class="span emptyFieldGender">This field is required.</span>
+                    <select name="select" data-validation="select">
+                        <option value="">Country *</option>
+                        <option value="ukraine">Ukraine</option>
+                        <option value="russia">Russia</option>
+                        <option value="belarus">Belarus</option>
+                    </select>
+                    <span class="span notValidCountry">You need to select a country.</span>
+                    <input data-validation="email" placeholder="Email *">
+                    <span class="span emptyFieldEmail">This field is required.</span>
+                    <span class="span notValidEmail">Email is not valid.</span>
+                    <input data-validation="password" placeholder="Password *">
+                    <span class="span emptyFieldPassword">This field is required.</span>
+                    <span class="span notValidPassword">Minimum 6 characters (A-Z,a-z,0-9).</span>
+                    <input data-validation="address" placeholder="Address *">
+                    <span class="span emptyFieldAddress">This field is required.</span>
+                    <textarea placeholder="Notes"></textarea>
+                    <p>* means that the field is required for input</p>
+                    <input type="button" data-validation="form" value="Submit">
+                </fieldset>
+            </form>
+        </section>
+        <script src="js/jquery.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    max-width: 400px;
+    height: 1000px;
+    margin: auto;
+}
+
+section {
+    max-width: 400px;
+    margin: 5px auto;
+}
+
+h1 ~ input, select ~ input:not(:last-child) {
+    height: 20px;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.dangerInput {
+    border: 1px solid red;
+}
+
+select {
+    display: block;
+    width: 100%;
+    margin: 15px 0 15px 0;
+}
+
+.span {
+    display: none;
+    color: red;
+}
+
+.showSpan {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin: 5px;
+}
+
+input:last-child {
+    color: white;
+    background-color: green;
+}
+
+.dangerFieldset {
+    border-color: red;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+}
